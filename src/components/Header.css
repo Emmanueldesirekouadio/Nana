@@ -1,0 +1,90 @@
+/* src/components/Header.css */
+.header {
+  top: 0;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1px solid #d4bc3f;
+  border-top: 0.1px solid #d4bc3f;
+  padding: 10px 20px; /* Combine padding top and bottom, add padding sides */
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left > img {
+  object-fit: contain;
+  height: 160px; /* Adjust height */
+  padding: 3px 0;
+}
+
+.header__center {
+  display: flex;
+  flex-grow: 1; /* Allow center to take available space */
+  justify-content: center; /* Center the nav within the center container */
+}
+
+.header__nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Increase the gap between list items */
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-item {
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #d4bc3f;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: #fff; /* Optional: Change color on hover */
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__login {
+  margin-left: auto; /* Push login link to the far right */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* Center the header items */
+    text-align: center; /* Center text inside header */
+  }
+
+  .header__left {
+    margin-bottom: 10px; /* Add space between logo and nav on small screens */
+  }
+
+  .header__center {
+    width: 100%; /* Make the center section take full width */
+  }
+
+  .header__nav {
+    flex-direction: column; /* Stack the nav items vertically */
+    gap: 1rem; /* Reduce the gap between items for smaller screens */
+  }
+
+  .header__right {
+    width: 100%; /* Make the right section take full width */
+    justify-content: center; /* Center the login link */
+    margin-top: 10px; /* Add space between nav and login link */
+  }
+
+  .header__login {
+    margin-left: 0; /* Reset margin for mobile */
+  }
+}
